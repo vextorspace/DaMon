@@ -1,4 +1,4 @@
-rootProject.name = "KotlinMultiplatformTesting"
+rootProject.name = "DaMon"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

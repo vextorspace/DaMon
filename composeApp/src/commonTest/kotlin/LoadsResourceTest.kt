@@ -1,12 +1,12 @@
-import io.kotest.matchers.nulls.shouldNotBeNull
-import io.kotest.matchers.shouldBe
-import resources.ResourceLoader
 import kotlin.test.Test
+import io.kotest.matchers.shouldBe
+import io.kotest.matchers.nulls.shouldNotBeNull
+import resources.ResourceLoader
 
-class LoadsResourceAndroidTest {
+class LoadsResourceTest {
 
     @Test
-    fun loadsAFileFromResources() {
+    fun `loads a file from the resources dir`() {
         ResourceLoader().readTextFromFile("/test.txt")
             .shouldNotBeNull()
             .shouldBe("boo!")

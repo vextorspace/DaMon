@@ -51,6 +51,7 @@ kotlin {
         }
         val desktopTest by getting{
             resources.srcDir(commonTest.resources.srcDirs)
+
             dependencies {
                 implementation(compose.desktop.currentOs)
             }
@@ -113,4 +114,8 @@ compose.desktop {
             packageVersion = "1.0.0"
         }
     }
+}
+
+tasks.withType<Copy> {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

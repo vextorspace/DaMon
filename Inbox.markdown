@@ -1,0 +1,13 @@
+# Inbox
+- [ ] read depth from page
+  - [ ] find first table
+  - [ ] find first row
+  - [ ] find cell depth
+  - [ ] parse depth of row
+  - [ ] find cell date
+  - [ ] parse date
+  - [ ] return depth and date
+- [ ] decide whether depth is changed
+- [ ] notify user if depth is changed
+- [ ] allow user to change parameters
+- [ ] notify user if depth cannot be read

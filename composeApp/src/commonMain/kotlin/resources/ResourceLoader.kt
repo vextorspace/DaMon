@@ -1,5 +1,5 @@
 package resources
 
-expect class ResourceLoader {
+expect class ResourceLoader() {
     fun readTextFromFile(path: String): String?
 }
