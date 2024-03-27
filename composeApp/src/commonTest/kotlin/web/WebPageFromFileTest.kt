@@ -14,6 +14,6 @@ class WebPageFromFileTest {
     @Test
     fun `loads document from resource`() {
         val webPage = WebPage.fromResource("/damDepth.html")
-        webPage.document.shouldNotBeNull()
+        webPage?.document.shouldNotBeNull()
     }
 }
