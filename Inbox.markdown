@@ -11,6 +11,7 @@
 - [ ] notify user if depth is changed
 - [ ] allow user to change parameters
 - [ ] notify user if depth cannot be read
+- [x] load document from text file
 - [ ] load document from page
 - [ ] get title of page from document
 - [ ] get nodes by class from document
