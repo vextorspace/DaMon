@@ -20,5 +20,9 @@ class WebPage(val document: Document?) {
         private fun documentFromText(html: String?): Document? {
             return html?.let { Ksoup.parse(it) }
         }
+
+        fun fromUrl(url: String): WebPage? {
+            return WebPage(null)
+        }
     }
 }
