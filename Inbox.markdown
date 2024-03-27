@@ -1,12 +1,12 @@
 # Inbox
 - [ ] read depth from page
-  - [ ] find first table
-  - [ ] find first row
-  - [ ] find cell depth
-  - [ ] parse depth of row
-  - [ ] find cell date
-  - [ ] parse date
-  - [ ] return depth and date
+  - [x] Create the page from file
+  - [ ] Create the page from url
+  - [ ] Read things from the page
+  - [ ] Get DamReading from the page
+  - [ ] No depth in page gives no DamReading
+  - [ ] Get date of DamReading
+  - [ ] Get depth from DamReading
 - [ ] decide whether depth is changed
 - [ ] notify user if depth is changed
 - [ ] allow user to change parameters
