@@ -10,4 +10,10 @@ class WebPageFromFileTest {
         val webPage = WebPage.fromResource("/damDepth.html")
         webPage.shouldNotBeNull()
     }
+
+    @Test
+    fun `loads document from resource`() {
+        val webPage = WebPage.fromResource("/damDepth.html")
+        webPage.document.shouldNotBeNull()
+    }
 }
