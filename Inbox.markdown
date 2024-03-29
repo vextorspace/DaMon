@@ -1,7 +1,7 @@
 # Inbox
 - [ ] read depth from page
   - [x] Create the page from file
-  - [ ] Create the page from url
+  - [x] Create the page from url
   - [ ] Read things from the page
   - [ ] Get DamReading from the page
   - [ ] No depth in page gives no DamReading
@@ -15,4 +15,7 @@
 - [x] load document from page
   - [x] what does it do with a bad url? 
 - [x] get title of page from document
-- [ ] get table by class from document
+- [x] get table by class from document
+- [ ] get a dam reading from the table
+- [ ] get latest dam reading from table of many when latest is first
+- [ ] test for dates from good and bad strings
