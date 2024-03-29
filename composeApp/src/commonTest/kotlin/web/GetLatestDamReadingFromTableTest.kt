@@ -26,7 +26,7 @@ class GetLatestDamReadingFromTableTest {
                 </tr>
             </table>
         """.trimIndent()
-        val table = WebPage(Ksoup.parse(htmlWithTable)).findTableByClass("sensor-table")
+        val table = WebPage(Ksoup.parse(htmlWithTable)).findDepthTable()
         val damReading = table?.mostRecentDamReading()
         damReading.shouldNotBeNull()
             .depth
@@ -43,7 +43,7 @@ class GetLatestDamReadingFromTableTest {
                 </tr>
             </table>
         """.trimIndent()
-        val table = WebPage(Ksoup.parse(htmlWithTable)).findTableByClass("sensor-table")
+        val table = WebPage(Ksoup.parse(htmlWithTable)).findDepthTable()
         val damReading = table?.mostRecentDamReading()
         damReading.shouldBeNull()
     }
@@ -53,7 +53,7 @@ class GetLatestDamReadingFromTableTest {
     fun `table from actual page gives depth`() {
         WebPage.fromResource("/damDepth.html")
             .shouldNotBeNull()
-            .findTableByClass("sensor-table")
+            .findDepthTable()
             .shouldNotBeNull()
             .mostRecentDamReading()
             .shouldNotBeNull()

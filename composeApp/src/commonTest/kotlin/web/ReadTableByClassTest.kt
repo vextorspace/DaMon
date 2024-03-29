@@ -13,7 +13,7 @@ class ReadTableByClassTest {
 
     @Test
     fun `read table by class gives table`() {
-        val table: DepthTable? = WebPage.fromResource("/damDepth.html")?.findTableByClass("sensor-table")
+        val table: DepthTable? = WebPage.fromResource("/damDepth.html")?.findDepthTable()
         table.shouldNotBeNull()
     }
 }

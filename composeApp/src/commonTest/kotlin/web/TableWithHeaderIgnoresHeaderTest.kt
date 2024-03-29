@@ -26,7 +26,7 @@ class TableWithHeaderIgnoresHeaderTest {
             </table>
         """.trimIndent()
         val table = WebPage(Ksoup.parse(htmlWithTable))
-            .findTableByClass("sensor-table")
+            .findDepthTable()
         val damReading = table?.mostRecentDamReading()
         damReading.shouldNotBeNull()
             .depth

@@ -8,6 +8,10 @@ class WebPage(val document: Document?) {
         return document?.title()
     }
 
+    fun findDepthTable(): DepthTable? {
+        return findTableByClass("sensor-table")
+    }
+
     fun findTableByClass(classTag: String): DepthTable? {
         return findElementByTag(classTag)?.let { DepthTable(it) }
     }
