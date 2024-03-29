@@ -4,15 +4,18 @@ import io.kotest.matchers.nulls.shouldNotBeNull
 import kotlin.test.Test
 
 class WebPageFromFileTest {
+    val document = ResourceDocumentGenerator("/damDepth.html").document()
+
     @Test
     fun `webpage loads document from resource`() {
-        val webPage = WebPage.fromResource("/damDepth.html")
-        webPage.shouldNotBeNull()
+        document?.let { WebPage(it) }
+            .shouldNotBeNull()
     }
 
     @Test
     fun `loads document from resource`() {
-        val webPage = WebPage.fromResource("/damDepth.html")
-        webPage?.document.shouldNotBeNull()
+        document?.let { WebPage(it) }
+            ?.document
+            .shouldNotBeNull()
     }
 }
