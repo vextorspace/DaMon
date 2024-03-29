@@ -16,7 +16,10 @@ class DepthTable(val element: Element) {
     }
 
     private fun getFirstRow(element: Element): DamRow? {
-        return element.select("tr:first-child").firstOrNull()
-            ?.let { DamRow.from(it) }
+        return element.selectFirst("tbody")
+            ?.selectFirst("tr")
+            ?.let {
+                DamRow.from(it)
+            }
     }
 }

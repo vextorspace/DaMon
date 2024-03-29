@@ -48,18 +48,16 @@ class GetLatestDamReadingFromTableTest {
         damReading.shouldBeNull()
     }
 
-    fun `row with missing date gives null dam reading`() {
-        val htmlWithTable = """
-            <table class="sensor-table">
-                <tr>
-                    <td></td>
-                    <td>1.0</td>
-                </tr>
-            </table>
-        """.trimIndent()
-        val table = WebPage(Ksoup.parse(htmlWithTable)).findTableByClass("sensor-table")
-        val damReading = table?.mostRecentDamReading()
-        damReading.shouldBeNull()
-    }
 
+    @Test
+    fun `table from actual page gives depth`() {
+        WebPage.fromResource("/damDepth.html")
+            .shouldNotBeNull()
+            .findTableByClass("sensor-table")
+            .shouldNotBeNull()
+            .mostRecentDamReading()
+            .shouldNotBeNull()
+            .depth
+            .shouldBeExactly(508.0)
+    }
 }

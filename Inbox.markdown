@@ -2,11 +2,11 @@
 - [ ] read depth from page
   - [x] Create the page from file
   - [x] Create the page from url
-  - [ ] Read things from the page
-  - [ ] Get DamReading from the page
-  - [ ] No depth in page gives no DamReading
-  - [ ] Get date of DamReading
-  - [ ] Get depth from DamReading
+  - [x] Read things from the page
+  - [x] Get DamReading from the page
+  - [x] No depth in page gives no DamReading
+  - [x] Get date of DamReading
+  - [x] Get depth from DamReading
 - [ ] decide whether depth is changed
 - [ ] notify user if depth is changed
 - [ ] allow user to change parameters
@@ -16,6 +16,6 @@
   - [x] what does it do with a bad url? 
 - [x] get title of page from document
 - [x] get table by class from document
-- [ ] get a dam reading from the table
-- [ ] get latest dam reading from table of many when latest is first
+- [x] get a dam reading from the table
+- [x] get latest dam reading from table of many when latest is first
 - [ ] test for dates from good and bad strings

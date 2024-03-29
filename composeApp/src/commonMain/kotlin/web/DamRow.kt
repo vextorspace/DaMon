@@ -20,9 +20,14 @@ class DamRow(val element: Element) {
 
     companion object {
         fun from(it: Element?): DamRow? {
-            return it?.let {
+            val row = it?.let {
                 DamRow(it)
             }
+
+            if(row?.getDepth() == null || row?.getDate() == null) {
+                return null
+            }
+            return row
         }
     }
 }
