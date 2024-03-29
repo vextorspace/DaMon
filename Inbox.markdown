@@ -13,6 +13,6 @@
 - [ ] notify user if depth cannot be read
 - [x] load document from text file
 - [x] load document from page
-  - [ ] what does it do with a bad url? 
-- [ ] get title of page from document
-- [ ] get nodes by class from document
+  - [x] what does it do with a bad url? 
+- [x] get title of page from document
+- [ ] get table by class from document
