@@ -8,11 +8,15 @@ class WebPage(val document: Document?) {
     }
 
     companion object {
-        fun fromUrl(url: String): WebPage {
-            return WebPage(UrlDocumentGenerator(url).document())
+        fun fromUrl(url: String): WebPage? {
+            return try {
+                WebPage(UrlDocumentGenerator(url).document())
+            } catch (e: Exception) {
+                null
+            }
         }
 
-        fun fromResource(resourcePath: String): WebPage {
+        fun fromResource(resourcePath: String): WebPage? {
             return WebPage(ResourceDocumentGenerator(resourcePath).document())
         }
     }
