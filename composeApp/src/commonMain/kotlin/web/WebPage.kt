@@ -1,6 +1,7 @@
 package web
 
 import com.fleeksoft.ksoup.nodes.Document
+import com.fleeksoft.ksoup.nodes.Element
 
 class WebPage(val document: Document?) {
     fun title(): String? {
@@ -8,7 +9,11 @@ class WebPage(val document: Document?) {
     }
 
     fun findTableByClass(classTag: String): DepthTable? {
-        return null
+        return findElementByTag(classTag)?.let { DepthTable(it) }
+    }
+
+    fun findElementByTag(classTag: String): Element? {
+        return document?.body()?.selectFirst(".$classTag")
     }
 
     companion object {

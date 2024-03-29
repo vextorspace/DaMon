@@ -1,3 +1,5 @@
 package web
 
-class DepthTable {}
+import com.fleeksoft.ksoup.nodes.Element
+
+class DepthTable(element: Element) {}
