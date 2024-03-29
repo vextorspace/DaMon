@@ -6,4 +6,6 @@ class WebPage(val document: Document?) {
     fun title(): String? {
         return document?.title()
     }
+
+
 }
