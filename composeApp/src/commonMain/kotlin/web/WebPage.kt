@@ -7,5 +7,13 @@ class WebPage(val document: Document?) {
         return document?.title()
     }
 
+    companion object {
+        fun fromUrl(url: String): WebPage {
+            return WebPage(UrlDocumentGenerator(url).document())
+        }
 
+        fun fromResource(resourcePath: String): WebPage {
+            return WebPage(ResourceDocumentGenerator(resourcePath).document())
+        }
+    }
 }
