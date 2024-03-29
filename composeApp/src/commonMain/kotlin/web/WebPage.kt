@@ -7,6 +7,10 @@ class WebPage(val document: Document?) {
         return document?.title()
     }
 
+    fun findTableByClass(classTag: String): DepthTable? {
+        return null
+    }
+
     companion object {
         fun fromUrl(url: String): WebPage? {
             return try {
