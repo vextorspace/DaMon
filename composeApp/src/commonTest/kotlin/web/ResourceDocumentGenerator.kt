@@ -9,14 +9,11 @@ class ResourceDocumentGenerator(val resourcePath: String): DocumentGenerator {
         return getDocumentFromText(readFileFromResource(resourcePath))
     }
 
-    companion object {
+    private fun getDocumentFromText(html: String?): Document? {
+        return html?.let { Ksoup.parse(it) }
+    }
 
-        private fun getDocumentFromText(html: String?): Document? {
-            return html?.let { Ksoup.parse(it) }
-        }
-
-        private fun readFileFromResource(resourcePath: String): String? {
-            return ResourceLoader().readTextFromFile(resourcePath)
-        }
+    private fun readFileFromResource(resourcePath: String): String? {
+        return ResourceLoader().readTextFromFile(resourcePath)
     }
 }

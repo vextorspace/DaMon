@@ -9,15 +9,13 @@ class WebPageFromUrlTest {
 
     @Test
     fun `webpage loads document from url`() {
-        document?.let {
-            WebPage(it)
-        }.shouldNotBeNull()
+        WebPage(document.shouldNotBeNull())
+            .shouldNotBeNull()
     }
 
     @Test
     fun `loads document from url`() {
-        document?.let {
-            WebPage(it)
-        }?.document.shouldNotBeNull()
+            WebPage(document.shouldNotBeNull())
+                .document.shouldNotBeNull()
     }
 }
