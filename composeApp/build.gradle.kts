@@ -43,6 +43,7 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.ksoup)
+            implementation(libs.ksoup.network)
         }
         val commonTest by getting {
             dependencies {

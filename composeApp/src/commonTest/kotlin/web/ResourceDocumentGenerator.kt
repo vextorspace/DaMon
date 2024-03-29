@@ -4,7 +4,7 @@ import com.fleeksoft.ksoup.Ksoup
 import com.fleeksoft.ksoup.nodes.Document
 import resources.ResourceLoader
 
-class ResourceDocumentGenerator(val resourcePath: String): DocumentGenerator(getDocumentFromText(resourcePath)) {
+class ResourceDocumentGenerator(val resourcePath: String): DocumentGenerator {
     override fun document(): Document? {
         return getDocumentFromText(readFileFromResource(resourcePath))
     }
