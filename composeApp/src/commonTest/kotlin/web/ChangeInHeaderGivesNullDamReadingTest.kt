@@ -1,26 +1,25 @@
 package web
 
 import com.fleeksoft.ksoup.Ksoup
-import io.kotest.matchers.doubles.shouldBeExactly
-import io.kotest.matchers.nulls.shouldNotBeNull
+import io.kotest.matchers.nulls.shouldBeNull
 import kotlin.test.Test
 
-class TableWithHeaderIgnoresHeaderTest {
+class ChangeInHeaderGivesNullDamReadingTest {
 
     @Test
-    fun `table with header ignores header`() {
+    fun `Date not in first header column returns null Dam Reading`() {
         val htmlWithTable = """
             <table class="sensor-table">
                 <thead>
                     <tr>
-                        <th>Updated</th>
-                        <th>Elevation</th>
+                        <th>Depth</th>
+                        <th>Date</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>3/29/2024 10:15 AM</td>
                         <td>1.0</td>
+                        <td>2.0</td>
                     </tr>
                 </tbody>
             </table>
@@ -28,8 +27,6 @@ class TableWithHeaderIgnoresHeaderTest {
         val table = WebPage(Ksoup.parse(htmlWithTable))
             .findDepthTable()
         val damReading = table?.mostRecentDamReading()
-        damReading.shouldNotBeNull()
-            .depth
-            .shouldBeExactly(1.0)
+        damReading.shouldBeNull()
     }
 }

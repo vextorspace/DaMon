@@ -20,10 +20,13 @@ class GetLatestDamReadingFromTableTest {
     fun `table with one row gives dam reading`() {
         val htmlWithTable = """
             <table class="sensor-table">
+            <thead><tr><th>Updated</th><th>Elevation</th></tr></thead>
+            <tbody>
                 <tr>
                     <td>3/29/2024 10:15 AM</td>
                     <td>1.0</td>
                 </tr>
+            </tbody>
             </table>
         """.trimIndent()
         val table = WebPage(Ksoup.parse(htmlWithTable)).findDepthTable()
@@ -37,10 +40,13 @@ class GetLatestDamReadingFromTableTest {
     fun `row with missing depth gives null dam reading`() {
         val htmlWithTable = """
             <table class="sensor-table">
+            <thead><tr><th>Updated</th><th>Elevation</th></tr></thead>
+            <tbody>
                 <tr>
                     <td>3/29/2024 10:15 AM</td>
                     <td></td>
                 </tr>
+            </tbody>
             </table>
         """.trimIndent()
         val table = WebPage(Ksoup.parse(htmlWithTable)).findDepthTable()
