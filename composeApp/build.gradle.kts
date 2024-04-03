@@ -4,6 +4,16 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
+    id("io.gitlab.arturbosch.detekt").version("1.18.1")
+}
+
+detekt {
+    config = files("detekt.yml")
+    reports {
+        html.enabled = true
+        xml.enabled = true
+        txt.enabled = true
+    }
 }
 
 kotlin {
