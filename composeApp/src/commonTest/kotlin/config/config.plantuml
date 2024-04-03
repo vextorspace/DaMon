@@ -1,0 +1,38 @@
+@startuml
+title Config Class Diagram
+
+class Config {
+    - configProvider: ConfigProvider
+    + setLastDepth(depth: Double)
+    + getLastDepth(): Double
+}
+
+interface ConfigProvider {
+    + setLastDepth(depth: Double)
+    + getLastDepth(): Double
+}
+
+class DesktopConfigProvider {
+    + setLastDepth(depth: Double)
+    + getLastDepth(): Double
+}
+
+class AndroidConfigProvider {
+    - context: Context
+    + AndroidConfigProvider(context: Context)
+    + setLastDepth(depth: Double)
+    + getLastDepth(): Double
+}
+
+class TestConfigProvider {
+    - lastDepth: Double
+    + TestConfigProvider(depth: Double)
+    + setLastDepth(depth: Double)
+    + getLastDepth(): Double
+}
+
+Config *-- ConfigProvider
+ConfigProvider <|.. DesktopConfigProvider
+ConfigProvider <|.. AndroidConfigProvider
+ConfigProvider <|.. TestConfigProvider
+@enduml
