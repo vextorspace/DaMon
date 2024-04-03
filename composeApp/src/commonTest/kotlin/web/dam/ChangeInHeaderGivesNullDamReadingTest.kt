@@ -1,7 +1,8 @@
-package web
+package web.dam
 
 import com.fleeksoft.ksoup.Ksoup
 import io.kotest.matchers.nulls.shouldBeNull
+import web.webpage.WebPage
 import kotlin.test.Test
 
 class ChangeInHeaderGivesNullDamReadingTest {

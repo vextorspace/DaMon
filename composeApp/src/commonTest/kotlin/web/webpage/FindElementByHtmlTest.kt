@@ -1,8 +1,9 @@
-package web
+package web.webpage
 
 import com.fleeksoft.ksoup.Ksoup
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
+import web.webpage.WebPage
 import kotlin.test.Test
 
 class FindElementByHtmlTest {

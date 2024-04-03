@@ -1,10 +1,12 @@
-package web
+package web.dam
 
 import com.fleeksoft.ksoup.Ksoup
 import com.fleeksoft.ksoup.nodes.Element
 import io.kotest.matchers.doubles.shouldBeExactly
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
+import web.depth.DepthTable
+import web.webpage.WebPage
 import kotlin.test.Test
 
 class GetLatestDamReadingFromTableTest {

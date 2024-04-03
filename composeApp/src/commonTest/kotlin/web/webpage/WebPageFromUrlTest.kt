@@ -1,7 +1,8 @@
-package web
+package web.webpage
 
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
+import web.webpage.WebPage
 import kotlin.test.Test
 
 class WebPageFromUrlTest {

@@ -1,4 +1,4 @@
-package web
+package web.dam
 
 data class DamTime(val dateTime: String) {
     companion object {

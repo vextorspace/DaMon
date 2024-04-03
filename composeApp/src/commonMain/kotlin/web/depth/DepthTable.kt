@@ -1,6 +1,8 @@
-package web
+package web.depth
 
 import com.fleeksoft.ksoup.nodes.Element
+import web.dam.DamReading
+import web.dam.DamRow
 
 class DepthTable(val element: Element) {
     fun mostRecentDamReading(): DamReading? {

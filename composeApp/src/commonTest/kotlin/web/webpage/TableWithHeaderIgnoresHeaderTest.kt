@@ -1,4 +1,4 @@
-package web
+package web.webpage
 
 import com.fleeksoft.ksoup.Ksoup
 import io.kotest.matchers.doubles.shouldBeExactly

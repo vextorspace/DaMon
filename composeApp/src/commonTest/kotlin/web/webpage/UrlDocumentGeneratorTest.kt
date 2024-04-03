@@ -1,6 +1,7 @@
-package web
+package web.webpage
 
 import io.kotest.matchers.nulls.shouldNotBeNull
+import web.webpage.UrlDocumentGenerator
 import kotlin.test.Test
 
 class UrlDocumentGeneratorTest {

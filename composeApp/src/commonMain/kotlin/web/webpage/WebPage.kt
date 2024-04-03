@@ -1,7 +1,8 @@
-package web
+package web.webpage
 
 import com.fleeksoft.ksoup.nodes.Document
 import com.fleeksoft.ksoup.nodes.Element
+import web.depth.DepthTable
 
 class WebPage(val document: Document?) {
     fun title(): String? {

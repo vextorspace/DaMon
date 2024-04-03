@@ -3,6 +3,9 @@ package acceptance
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 import web.*
+import web.dam.DamReading
+import web.dam.DamTime
+import web.webpage.WebPage
 import kotlin.test.Test
 
 class FindsDepthInWebPageTest {

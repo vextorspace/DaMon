@@ -1,9 +1,9 @@
-package web
+package web.dam
 
 import com.fleeksoft.ksoup.Ksoup
-import com.fleeksoft.ksoup.nodes.Element
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
+import web.dam.DamRow
 import kotlin.test.Test
 
 class DamRowNullWhenGivenHeaderTest {
