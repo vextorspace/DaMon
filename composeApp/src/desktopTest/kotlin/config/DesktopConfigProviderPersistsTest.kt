@@ -9,8 +9,7 @@ class DesktopConfigProviderPersistsTest {
     fun `config contains a lastDepth that is a double`() {
         val depth = 1.3
         val desktopConfigProvider = DesktopConfigProvider()
-        desktopConfigProvider.lastDepth = depth
-        Config(desktopConfigProvider)
+        Config(desktopConfigProvider).lastDepth = depth
 
 
         Config(DesktopConfigProvider())
