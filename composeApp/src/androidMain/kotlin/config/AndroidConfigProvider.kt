@@ -2,9 +2,8 @@ package config
 
 import android.content.Context
 
-private const val CONFIG_KEY = "daMonConfig"
-private const val LAST_DEPTH_KEY = "lastDepth"
-
+private const val CONFIG_KEY = "DA_MON_CONFIG"
+private const val LAST_DEPTH_KEY = "LAST_DEPTH"
 class AndroidConfigProvider(context: Context) : ConfigProvider {
     private val sharedPreferences = context.getSharedPreferences(
         CONFIG_KEY,
