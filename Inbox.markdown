@@ -9,8 +9,8 @@
   - [x] Get depth from DamReading`
 - [ ] decide whether depth is changed
   - [x] load last depth notified from config
-  - [ ] load change in depth to notify from config
-  - [ ] read current depth
+  - [x] load change in depth to notify from config
+  - [ ] read current depth from page
   - [ ] compute abs(last depth - current depth)
   - [ ] compare to change in depth to notify`
 - [ ] notify user if depth is changed
