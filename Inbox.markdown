@@ -6,8 +6,13 @@
   - [x] Get DamReading from the page
   - [x] No depth in page gives no DamReading
   - [x] Get date of DamReading
-  - [x] Get depth from DamReading
+  - [x] Get depth from DamReading`
 - [ ] decide whether depth is changed
+  - [x] load last depth notified from config
+  - [ ] load change in depth to notify from config
+  - [ ] read current depth
+  - [ ] compute abs(last depth - current depth)
+  - [ ] compare to change in depth to notify`
 - [ ] notify user if depth is changed
 - [ ] allow use****r to change parameters
 - [ ] notify user if depth cannot be read

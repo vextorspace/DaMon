@@ -1,9 +1,14 @@
 package config
 
-class TestConfigProvider(var depth: Double) : ConfigProvider {
+class TestConfigProvider(private var _lastDepth: Double = 0.0) : ConfigProvider {
+
+    fun withLastDepth(depth: Double): ConfigProvider {
+        return TestConfigProvider(depth)
+    }
+
     override var lastDepth: Double
-        get() = depth
+        get() = _lastDepth
         set(value) {
-            depth = value
+            _lastDepth = value
         }
 }
