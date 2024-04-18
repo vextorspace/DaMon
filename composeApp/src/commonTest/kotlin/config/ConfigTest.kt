@@ -18,6 +18,9 @@ class ConfigTest {
     @Test
     fun `config contains change in depth that results in a notification`() {
         val significantChangeInDepth = 5.5
-        val config = Config(TestConfigProvider(0.0))
+        val config = Config(TestConfigProvider().withSignificantChangeInDepth(significantChangeInDepth))
+
+        config.significantChangeInDepth
+            .shouldBeExactly(significantChangeInDepth)
     }
 }

@@ -7,7 +7,7 @@ import org.junit.Test
 class AndroidConfigProviderPersistsDepthTest {
 
     @Test
-    fun configProviderPersistsDepthTest() {
+    fun configProviderPersistsLastDepthTest() {
         val depth = 1.3
         val context = InstrumentationRegistry.getInstrumentation()
                                              .targetContext
@@ -17,5 +17,20 @@ class AndroidConfigProviderPersistsDepthTest {
         Config(AndroidConfigProvider(context))
             .lastDepth
             .shouldBeExactly(depth)
+    }
+
+    @Test
+    fun configProviderPersistsSignificantChangeInDepthTest() {
+        val change = 17.0
+
+        val context = InstrumentationRegistry.getInstrumentation()
+            .targetContext
+        val androidConfigProvider = AndroidConfigProvider(context)
+        Config(androidConfigProvider).significantChangeInDepth = change
+
+        Config(AndroidConfigProvider(context))
+            .significantChangeInDepth
+            .shouldBeExactly(change)
+
     }
 }

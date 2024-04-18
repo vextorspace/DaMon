@@ -15,6 +15,17 @@ class DesktopConfigProviderPersistsTest {
         Config(DesktopConfigProvider())
             .lastDepth
             .shouldBeExactly(depth)
+    }
 
+    @Test
+    fun `config contains a significantChangeInDepth that is a double`() {
+        val change = 173.0
+        val desktopConfigProvider = DesktopConfigProvider()
+        Config(desktopConfigProvider).significantChangeInDepth = change
+
+
+        Config(DesktopConfigProvider())
+            .significantChangeInDepth
+            .shouldBeExactly(change)
     }
 }
