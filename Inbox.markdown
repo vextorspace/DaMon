@@ -4,12 +4,22 @@
   - [x] load change in depth to notify from config
   - [ ] read current depth from page and verify it is a double
     - [ ] get json query from page
+      - [ ] send get request to url
+      - [ ] convert response to json object
     - [ ] read depth from json query
+      - [ ] get depth&dates from json object
+      - [ ] sort by date
+      - [ ] get last depth&date
+      - [ ] extract depth from depth&date
+      - [ ] verify depth is a positive double
+      - [ ] validate date is recent enough
     - [ ] validate correct dam is being read
+      - [ ] get location from json
+      - [ ] compare location to known dam location
   - [ ] compute abs(last depth - current depth)
   - [ ] compare to change in depth to notify`
 - [ ] notify user if depth is changed
-- [ ] allow use****r to change parameters
+- [ ] allow user to change parameters
 - [ ] notify user if depth cannot be read
 - [ ] check if a date is before or after another date
 - [ ] check the time between two dates
