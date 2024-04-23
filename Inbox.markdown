@@ -1,28 +1,16 @@
 # Inbox
-- [x] read depth from page
-  - [x] Create the page from file
-  - [x] Create the page from url
-  - [x] Read things from the page
-  - [x] Get DamReading from the page
-  - [x] No depth in page gives no DamReading
-  - [x] Get date of DamReading
-  - [x] Get depth from DamReading`
 - [ ] decide whether depth is changed
   - [x] load last depth notified from config
   - [x] load change in depth to notify from config
-  - [ ] read current depth from page
+  - [ ] read current depth from page and verify it is a double
+    - [ ] get json query from page
+    - [ ] read depth from json query
+    - [ ] validate correct dam is being read
   - [ ] compute abs(last depth - current depth)
   - [ ] compare to change in depth to notify`
 - [ ] notify user if depth is changed
 - [ ] allow use****r to change parameters
 - [ ] notify user if depth cannot be read
-- [x] load document from text file
-- [x] load document from page
-  - [x] what does it do with a bad url? 
-- [x] get title of page from document
-- [x] get table by class from document
-- [x] get a dam reading from the table
-- [x] get latest dam reading from table of many when latest is first
 - [ ] check if a date is before or after another date
 - [ ] check the time between two dates
 - [ ] ui?
