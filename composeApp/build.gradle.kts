@@ -47,6 +47,10 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.ksoup)
             implementation(libs.ksoup.network)
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.json)
+            implementation(libs.ktor.client.serialization)
+
         }
         val commonTest by getting {
             dependencies {
