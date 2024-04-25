@@ -1,8 +1,7 @@
 package depth.jsonreader
 
-import depth.DepthReading
-import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.doubles.shouldBeExactly
+import io.kotest.matchers.nulls.shouldNotBeNull
 import kotlin.test.Test
 
 class JSonReaderTranslatesTest {
@@ -11,7 +10,7 @@ class JSonReaderTranslatesTest {
     fun `should translate json to depth`() {
         val depth = 489.83
         val jsonString = makeSampleDataWithDepth(depth)
-        val depthReading: DepthReading = JSonReader(jsonString).readDam()
+        val depthReading = JSonReader(jsonString).readDam()
 
         depthReading.shouldNotBeNull()
             .depth()
@@ -20,9 +19,9 @@ class JSonReaderTranslatesTest {
 
     @Test
     fun `should translate json with no decimal to depth`() {
-        val depth: Int = 127
+        val depth = 127
         val jsonString = makeSampleDataWithDepth(depth)
-          val depthReading: DepthReading = JSonReader(jsonString).readDam()
+          val depthReading = JSonReader(jsonString).readDam()
 
         depthReading.shouldNotBeNull()
             .depth()
