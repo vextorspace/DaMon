@@ -3,15 +3,16 @@
   - [x] load last depth notified from config
   - [x] load change in depth to notify from config
   - [ ] read current depth from page and verify it is a double
-    - [ ] get json query from page
-      - [ ] send get request to url
-      - [ ] convert response to json object
+    - [x] get json query from page
+      - [x] send get request to url
+      - [ ] make json url creation more robust (combining url with)
+      - [x] convert response to json object
     - [ ] read depth from json query
-      - [ ] get depth&dates from json object
+      - [x] get depth&dates from json object
       - [ ] sort by date
       - [ ] get last depth&date
-      - [ ] extract depth from depth&date
-      - [ ] verify depth is a positive double
+      - [x] extract depth from depth&date
+      - [x] verify depth is a positive double
       - [ ] validate date is recent enough
     - [ ] validate correct dam is being read
       - [ ] get location from json
