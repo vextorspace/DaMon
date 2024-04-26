@@ -20,6 +20,9 @@
   - [ ] compute abs(last depth - current depth)
   - [ ] compare to change in depth to notify`
 - [ ] notify user if depth is changed
+  - [ ] store new depth in config
+  - [ ] use pop-up in desktop
+  - [ ] use notification in mobile
 - [ ] allow user to change parameters
 - [ ] notify user if depth cannot be read
 - [ ] check if a date is before or after another date

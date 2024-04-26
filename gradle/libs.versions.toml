@@ -19,6 +19,7 @@ kotest = "5.8.1"
 ksoup = "0.1.2"
 ktorClientCore = "2.3.10"
 serialization = "1.3.11"
+rules = "1.5.0"
 
 [libraries]
 ksoup = { module = "com.fleeksoft.ksoup:ksoup", version.ref = "ksoup" }
@@ -43,6 +44,7 @@ ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorCli
 ktor-client-json = { module = "io.ktor:ktor-client-json", version.ref = "ktorClientCore" }
 ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktorClientCore" }
 kotlinxSerializationJson = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+androidx-rules = { group = "androidx.test", name = "rules", version.ref = "rules" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
